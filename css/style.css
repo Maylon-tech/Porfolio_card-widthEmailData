@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2em;
+    background-color: #000;
+}
+
+.container-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    height: 100vh;
+    background: linear-gradient(-70deg, #ebebeb 50%, #000 50%);
+    color: #fff;
+    overflow: hidden;
+    animation: page 600ms ease-in-out forwards;
+}
+
+@keyframes page {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} 
+
+.container-main .bio {
+    max-width: 300px;
+    margin-top: 20vh;
+}
+.container-main .bio .prpfile {
+    max-width: 7em;
+    border-radius: 50%;
+}
+
+.container-main .header {
+    color: gold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.25rem;
+    margin: .5em 0;
+}
+
+.container-main .bio .bio-link {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    display: inline-block;
+    clear: left;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: .25rem;
+    transition: color 300ms ease-in-out;
+}
+.container-main .bio .bio-link::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background-color: gold;
+    transition: width 300ms ease-in-out;
+}
+.container-main .bio .bio-link:hover::after {
+    width: 100%;
+} 
+
+/* Contact form - left contant */
+
+.container-main .contact {
+    color: #000;
+}
+
+form {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 4em;
+    width: 100%;
+    max-width: 800px;
+}
+form h3 {
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+form input, form textarea {
+    border: 0;
+    margin: 5px 0;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    border: 0.5px solid snow;
+    resize: none;
+}
+form button {
+    padding: 15px;
+    background-color: #000;
+    color: gold;
+    font-size: 18px;
+    outline: none;
+    border: 0;
+    border-radius: 30px;
+    width: 150px;
+    margin: 20px auto 0;
+}
+form button:hover {
+    transition: .4s ease;
+    background: #17c;
+    color: #fff;
+}
